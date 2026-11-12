@@ -22,6 +22,7 @@ import (
 func TestIsRestoreLockedModeEnabled(t *testing.T) {
 	t.Parallel()
 
+	//nolint:govet
 	tests := []struct {
 		name    string
 		content []byte
@@ -144,7 +145,6 @@ func TestIsRestoreLockedModeEnabled(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		tt := tt
 		t.Run(tt.name, func(t *testing.T) {
 			t.Parallel()
 
@@ -162,6 +162,7 @@ func TestIsRestoreLockedModeEnabled(t *testing.T) {
 func TestIsAllowUnsafeBlocksEnabled(t *testing.T) {
 	t.Parallel()
 
+	//nolint:govet
 	tests := []struct {
 		name    string
 		content []byte
@@ -284,7 +285,6 @@ func TestIsAllowUnsafeBlocksEnabled(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		tt := tt
 		t.Run(tt.name, func(t *testing.T) {
 			t.Parallel()
 
